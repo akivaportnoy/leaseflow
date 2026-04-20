@@ -95,9 +95,9 @@ export default function TemplateFooter({ property, template, basePath = "" }) {
           {/* Management Company */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-70">
-              Management
+              Professionally Managed By
             </h4>
-            <p className="text-sm opacity-80">
+            <p className="text-sm opacity-80 font-medium">
               {property.management_company || "Property Management Company"}
             </p>
             {property.privacy_policy_url && (
