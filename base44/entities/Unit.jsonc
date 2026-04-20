@@ -1,0 +1,77 @@
+{
+  "name": "Unit",
+  "type": "object",
+  "properties": {
+    "property_id": {
+      "type": "string",
+      "description": "Reference to the Property"
+    },
+    "unit_type": {
+      "type": "string",
+      "description": "e.g. Studio, 1BR, 2BR, 3BR, Penthouse"
+    },
+    "unit_number": {
+      "type": "string"
+    },
+    "bedrooms": {
+      "type": "number"
+    },
+    "bathrooms": {
+      "type": "number"
+    },
+    "sqft": {
+      "type": "number"
+    },
+    "price": {
+      "type": "number",
+      "description": "Monthly rent"
+    },
+    "deposit": {
+      "type": "number"
+    },
+    "available_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "leased",
+        "pending",
+        "coming_soon"
+      ],
+      "default": "available"
+    },
+    "floor_plan_url": {
+      "type": "string"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "caption": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "property_id",
+    "unit_type"
+  ]
+}

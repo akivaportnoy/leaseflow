@@ -1,0 +1,48 @@
+{
+  "name": "ContactSubmission",
+  "type": "object",
+  "properties": {
+    "property_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "move_in_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "unit_interest": {
+      "type": "string"
+    },
+    "custom_fields": {
+      "type": "object",
+      "description": "Additional custom form field values"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "toured",
+        "applied",
+        "closed"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "property_id",
+    "name",
+    "email"
+  ]
+}

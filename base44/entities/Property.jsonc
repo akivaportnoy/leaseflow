@@ -1,0 +1,206 @@
+{
+  "name": "Property",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Property name"
+    },
+    "tagline": {
+      "type": "string",
+      "description": "Short tagline/motto for the property"
+    },
+    "description": {
+      "type": "string",
+      "description": "Full property description"
+    },
+    "hero_headline": {
+      "type": "string",
+      "description": "H1 headline for the hero section"
+    },
+    "hero_subheadline": {
+      "type": "string",
+      "description": "H2 subheadline"
+    },
+    "hero_text": {
+      "type": "string",
+      "description": "H3 or body text under hero"
+    },
+    "hero_image_url": {
+      "type": "string",
+      "description": "Hero/background image URL"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "Property logo URL"
+    },
+    "address": {
+      "type": "string",
+      "description": "Full street address"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "office_hours": {
+      "type": "string",
+      "description": "Office hours text"
+    },
+    "resident_portal_url": {
+      "type": "string",
+      "description": "External URL for Resident Portal button"
+    },
+    "management_company": {
+      "type": "string",
+      "description": "Property management company name"
+    },
+    "privacy_policy_url": {
+      "type": "string"
+    },
+    "template_id": {
+      "type": "string",
+      "enum": [
+        "metropolitan",
+        "verdant",
+        "kinetic",
+        "heritage",
+        "zenith",
+        "panorama",
+        "brut",
+        "velvet",
+        "canvas",
+        "pulse",
+        "nordic",
+        "prism"
+      ],
+      "description": "Which template design to use"
+    },
+    "amenities": {
+      "type": "array",
+      "description": "List of amenities",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "community",
+              "unit",
+              "outdoor",
+              "fitness",
+              "tech",
+              "pet",
+              "parking",
+              "other"
+            ]
+          }
+        }
+      }
+    },
+    "property_photos": {
+      "type": "array",
+      "description": "Property-level photo URLs",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "caption": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "faqs": {
+      "type": "array",
+      "description": "Frequently asked questions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "features": {
+      "type": "array",
+      "description": "Key property features/highlights",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "pet_policy": {
+      "type": "string"
+    },
+    "lease_terms": {
+      "type": "string"
+    },
+    "contact_form_fields": {
+      "type": "array",
+      "description": "Custom contact form fields",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "text",
+              "email",
+              "phone",
+              "textarea",
+              "select"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
