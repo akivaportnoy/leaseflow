@@ -71,9 +71,14 @@ function FloatGridHero({ property, template, basePath }) {
               {property.hero_subheadline}
             </h2>
             <p className="text-base opacity-60 max-w-md leading-relaxed">{property.hero_text}</p>
-            <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-base font-semibold transition-all hover:opacity-90 shadow-lg" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: "9999px", minHeight: "44px" }}>
-              Lease Now
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-base font-semibold transition-all hover:opacity-90 shadow-lg" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: "9999px", minHeight: "44px" }}>
+                Explore Availability
+              </Link>
+              <a href="#amenities" className="inline-flex items-center px-8 py-4 text-base font-semibold border transition-all hover:opacity-80" style={{ borderColor: colors.border, borderRadius: "9999px", minHeight: "44px" }}>
+                Discover Amenities
+              </a>
+            </div>
           </div>
           <div className="relative">
             {property.hero_image_url ? (
@@ -107,8 +112,11 @@ function DeckSlideHero({ property, template, basePath }) {
             <p className="text-base opacity-50 mb-10 max-w-md">{property.hero_text}</p>
             <div className="flex flex-wrap gap-4">
               <Link to={`${basePath}/availability`} className="px-8 py-4 text-sm font-bold uppercase tracking-wider transition-all hover:opacity-90" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: template.radius, minHeight: "44px" }}>
-                View Units →
+                Explore Availability
               </Link>
+              <a href="#amenities" className="px-8 py-4 text-sm font-bold uppercase tracking-wider border transition-all hover:opacity-80" style={{ borderColor: colors.border, borderRadius: template.radius, minHeight: "44px" }}>
+                Discover Amenities
+              </a>
             </div>
           </div>
           <div className="relative">
@@ -137,9 +145,14 @@ function BorderedClassicHero({ property, template, basePath }) {
           <div className="w-24 h-0.5 mx-auto mb-6" style={{ backgroundColor: colors.accent }} />
           <h2 className="text-lg lg:text-xl italic mb-6 opacity-80" style={{ fontFamily: fonts.heading }}>{property.hero_subheadline}</h2>
           <p className="text-base opacity-60 mb-10 max-w-lg mx-auto">{property.hero_text}</p>
-          <Link to={`${basePath}/availability`} className="inline-flex items-center px-10 py-4 text-sm font-semibold uppercase tracking-widest border-2 transition-all hover:opacity-80" style={{ borderColor: colors.accent, color: colors.accent, minHeight: "44px" }}>
-            View Residences
-          </Link>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link to={`${basePath}/availability`} className="inline-flex items-center px-10 py-4 text-sm font-semibold uppercase tracking-widest transition-all hover:opacity-90" style={{ backgroundColor: colors.accent, color: colors.bg, minHeight: "44px" }}>
+              Explore Availability
+            </Link>
+            <a href="#amenities" className="inline-flex items-center px-10 py-4 text-sm font-semibold uppercase tracking-widest border-2 transition-all hover:opacity-80" style={{ borderColor: colors.accent, color: colors.accent, minHeight: "44px" }}>
+              Discover Amenities
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -155,9 +168,14 @@ function CenteredMinimalHero({ property, template, basePath }) {
         <h1 className="text-5xl sm:text-6xl lg:text-8xl font-light leading-none tracking-tight mb-8" style={{ fontFamily: fonts.heading }}>{property.hero_headline}</h1>
         <h2 className="text-lg lg:text-xl mb-6 opacity-50">{property.hero_subheadline}</h2>
         <p className="text-base opacity-40 mb-12 max-w-md mx-auto leading-relaxed">{property.hero_text}</p>
-        <Link to={`${basePath}/availability`} className="inline-flex items-center px-10 py-4 text-sm font-medium tracking-widest uppercase border transition-all hover:opacity-70" style={{ borderColor: colors.text, color: colors.text, minHeight: "44px" }}>
-          Explore
-        </Link>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link to={`${basePath}/availability`} className="inline-flex items-center px-10 py-4 text-sm font-medium tracking-widest uppercase transition-all hover:opacity-90" style={{ backgroundColor: colors.text, color: colors.bg, borderRadius: template.radius, minHeight: "44px" }}>
+            Explore Availability
+          </Link>
+          <a href="#amenities" className="inline-flex items-center px-10 py-4 text-sm font-medium tracking-widest uppercase border transition-all hover:opacity-70" style={{ borderColor: colors.text, color: colors.text, minHeight: "44px" }}>
+            Discover Amenities
+          </a>
+        </div>
         <div className="mt-20 animate-bounce"><ChevronDown size={24} style={{ color: colors.muted }} /></div>
       </div>
     </section>
@@ -177,9 +195,14 @@ function WideLandscapeHero({ property, template, basePath }) {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4" style={{ fontFamily: fonts.heading }}>{property.hero_headline}</h1>
           <h2 className="text-lg mb-4 opacity-70">{property.hero_subheadline}</h2>
           <p className="text-base opacity-50 mb-8 max-w-2xl">{property.hero_text}</p>
-          <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-3 text-sm font-semibold transition-all" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: template.radius, minHeight: "44px" }}>
-            See Availability
-          </Link>
+          <div className="flex flex-wrap gap-4">
+            <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-3 text-sm font-semibold transition-all" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: template.radius, minHeight: "44px" }}>
+              Explore Availability
+            </Link>
+            <a href="#amenities" className="inline-flex items-center px-8 py-3 text-sm font-semibold border transition-all hover:opacity-80" style={{ borderColor: colors.border, borderRadius: template.radius, minHeight: "44px" }}>
+              Discover Amenities
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -197,9 +220,14 @@ function BrutalistStackHero({ property, template, basePath }) {
           <div className="h-1 w-20 mb-6" style={{ backgroundColor: colors.accent }} />
           <h2 className="text-xl lg:text-2xl uppercase font-bold mb-4 opacity-70">{property.hero_subheadline}</h2>
           <p className="text-base mb-8 max-w-xl opacity-60">{property.hero_text}</p>
-          <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-sm font-black uppercase tracking-widest" style={{ backgroundColor: colors.accent, color: "#FFFFFF", minHeight: "44px" }}>
-            Apply Now
-          </Link>
+          <div className="flex flex-wrap gap-4">
+            <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-sm font-black uppercase tracking-widest" style={{ backgroundColor: colors.accent, color: "#FFFFFF", minHeight: "44px" }}>
+              Explore Availability
+            </Link>
+            <a href="#amenities" className="inline-flex items-center px-8 py-4 text-sm font-black uppercase tracking-widest border transition-all hover:opacity-80" style={{ borderColor: colors.accent, color: colors.accent, minHeight: "44px" }}>
+              Discover Amenities
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -217,9 +245,14 @@ function DarkLuxeHero({ property, template, basePath }) {
         <h1 className="text-5xl sm:text-6xl lg:text-8xl font-light italic leading-none mb-8" style={{ fontFamily: fonts.heading, color: colors.accent }}>{property.hero_headline}</h1>
         <h2 className="text-lg lg:text-xl mb-6 opacity-60">{property.hero_subheadline}</h2>
         <p className="text-base mb-12 opacity-40 max-w-lg mx-auto">{property.hero_text}</p>
-        <Link to={`${basePath}/availability`} className="inline-flex items-center px-10 py-4 text-sm font-medium tracking-widest uppercase border transition-all hover:opacity-80" style={{ borderColor: colors.accent, color: colors.accent, borderRadius: template.radius, minHeight: "44px" }}>
-          Reserve Your Residence
-        </Link>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link to={`${basePath}/availability`} className="inline-flex items-center px-10 py-4 text-sm font-medium tracking-widest uppercase transition-all hover:opacity-90" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: template.radius, minHeight: "44px" }}>
+            Explore Availability
+          </Link>
+          <a href="#amenities" className="inline-flex items-center px-10 py-4 text-sm font-medium tracking-widest uppercase border transition-all hover:opacity-80" style={{ borderColor: colors.accent, color: colors.accent, borderRadius: template.radius, minHeight: "44px" }}>
+            Discover Amenities
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -238,9 +271,14 @@ function GalleryMinimalHero({ property, template, basePath }) {
           </div>
           <div className="lg:col-span-5 space-y-6">
             <h2 className="text-lg italic opacity-60" style={{ fontFamily: fonts.heading }}>{property.hero_subheadline}</h2>
-            <Link to={`${basePath}/availability`} className="inline-flex items-center text-sm font-medium underline underline-offset-4 hover:opacity-70 transition-opacity" style={{ minHeight: "44px" }}>
-              View Available Residences →
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-3 text-sm font-medium border-b-2 transition-all hover:opacity-70" style={{ borderColor: colors.text, minHeight: "44px" }}>
+                Explore Availability
+              </Link>
+              <a href="#amenities" className="inline-flex items-center px-8 py-3 text-sm font-medium border-b-2 transition-all hover:opacity-70" style={{ borderColor: colors.text, minHeight: "44px" }}>
+                Discover Amenities
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -261,9 +299,14 @@ function GradientWaveHero({ property, template, basePath }) {
             </h1>
             <h2 className="text-xl mb-4 opacity-70">{property.hero_subheadline}</h2>
             <p className="text-base opacity-50 mb-10 max-w-md">{property.hero_text}</p>
-            <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-sm font-bold shadow-lg transition-all hover:shadow-xl" style={{ background: `linear-gradient(135deg, ${colors.accent}, ${colors.muted})`, color: "#FFFFFF", borderRadius: "9999px", minHeight: "44px" }}>
-              Start Your Journey
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-sm font-bold shadow-lg transition-all hover:shadow-xl" style={{ background: `linear-gradient(135deg, ${colors.accent}, ${colors.muted})`, color: "#FFFFFF", borderRadius: "9999px", minHeight: "44px" }}>
+                Explore Availability
+              </Link>
+              <a href="#amenities" className="inline-flex items-center px-8 py-4 text-sm font-bold border transition-all hover:opacity-80" style={{ borderColor: colors.accent, color: colors.accent, borderRadius: "9999px", minHeight: "44px" }}>
+                Discover Amenities
+              </a>
+            </div>
           </div>
           {property.hero_image_url && (
             <div className="relative">
@@ -287,9 +330,14 @@ function CleanNordicHero({ property, template, basePath }) {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6" style={{ fontFamily: fonts.heading }}>{property.hero_headline}</h1>
           <h2 className="text-lg opacity-60 mb-6">{property.hero_subheadline}</h2>
           <p className="text-base opacity-50 mb-10 leading-relaxed">{property.hero_text}</p>
-          <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-sm font-semibold transition-all hover:opacity-90" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: template.radius, minHeight: "44px" }}>
-            Find Your Home
-          </Link>
+          <div className="flex flex-wrap gap-4">
+            <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-sm font-semibold transition-all hover:opacity-90" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: template.radius, minHeight: "44px" }}>
+              Explore Availability
+            </Link>
+            <a href="#amenities" className="inline-flex items-center px-8 py-4 text-sm font-semibold border transition-all hover:opacity-80" style={{ borderColor: colors.border, borderRadius: template.radius, minHeight: "44px" }}>
+              Discover Amenities
+            </a>
+          </div>
         </div>
         {property.hero_image_url && (
           <div className="overflow-hidden aspect-[21/9]" style={{ borderRadius: template.radius }}>
@@ -316,9 +364,14 @@ function GeometricOverlapHero({ property, template, basePath }) {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" style={{ fontFamily: fonts.heading }}>{property.hero_headline}</h1>
             <h2 className="text-lg mb-4 opacity-60">{property.hero_subheadline}</h2>
             <p className="text-base opacity-50 mb-10 max-w-md">{property.hero_text}</p>
-            <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-sm font-bold transition-all hover:opacity-90 shadow-lg" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: template.radius, minHeight: "44px" }}>
-              View Floor Plans
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link to={`${basePath}/availability`} className="inline-flex items-center px-8 py-4 text-sm font-bold transition-all hover:opacity-90 shadow-lg" style={{ backgroundColor: colors.accent, color: "#FFFFFF", borderRadius: template.radius, minHeight: "44px" }}>
+                Explore Availability
+              </Link>
+              <a href="#amenities" className="inline-flex items-center px-8 py-4 text-sm font-bold border transition-all hover:opacity-80" style={{ borderColor: colors.accent, color: colors.accent, borderRadius: template.radius, minHeight: "44px" }}>
+                Discover Amenities
+              </a>
+            </div>
           </div>
           {property.hero_image_url && (
             <div className="relative">
